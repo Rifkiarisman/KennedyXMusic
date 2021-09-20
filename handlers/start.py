@@ -41,15 +41,6 @@ async def start_(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                ],[
-                    InlineKeyboardButton(
-                        "ʀᴇᴘᴏ​​", url="https://github.com/KennedyProject/KennedyXMusic"
-                    ),
-                    InlineKeyboardButton(
-                        "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{GROUP_SUPPORT}")
-                ],[
-                    InlineKeyboardButton(
-                        "ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ​ ❓​", callback_data="cbcmds"
                     )
                 ]
             ]
@@ -68,8 +59,8 @@ async def start(client: Client, message: Message):
     await message.reply_text(
         f"""<b>👋 **Hello {message.from_user.mention()}** ❗</b>
 
-✅ **I'm active and ready to play music!
-• Start time: `{START_TIME_ISO}`
+✅ **ɪᴍ ʀᴇᴀᴅʏ ɢᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ!**
+• sᴛᴀʀᴛ ᴛɪᴍᴇ: `{START_TIME_ISO}`
 
 > Click on button » 📚 **Command** and see all bot commands!
 """,
@@ -77,11 +68,11 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "👥 Support", url=f"https://t.me/{GROUP_SUPPORT}")
+                        "🔥 ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/{GROUP_SUPPORT}")
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Command", callback_data="cbcmds"
+                        "📚 ᴄᴏᴍᴍᴀɴᴅ", callback_data="cbcmds"
                     )
                 ]
             ]
@@ -95,7 +86,7 @@ async def help(client: Client, message: Message):
         f"""<b>👋 **Hello** {message.from_user.mention()}</b>
 **Please press the button below to read the explanation and see the list of available commands !**
 
-💡 Bot by @{UPDATES_CHANNEL}""",
+💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -114,7 +105,7 @@ async def help_(client: Client, message: Message):
 
 **__In this menu you can open several available command menus, in each command menu there is also a brief explanation of each command__**
 
-💡 Bot by @{UPDATES_CHANNEL}""",
+💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
